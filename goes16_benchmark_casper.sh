@@ -7,7 +7,6 @@
 #SBATCH --mem=128G
 #SBATCH --cpus-per-task=1
 #SBATCH --gres=gpu:v100:1
-module purge
 module load ncarenv/1.3 gnu/7.4.0 ncarcompilers/0.5.0 python/3.7.5 cuda/10.1
 ncar_pylib  
 pip install -e .
