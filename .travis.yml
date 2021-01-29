@@ -8,7 +8,7 @@ before_install:
   - sh Miniconda3-latest-Linux-x86_64.sh -b -p /home/travis/miniconda
   - export PATH=/home/travis/miniconda/bin:$PATH
 install:
-  - conda create -n test --yes -c conda-forge python=$PYTHON_VERSION pip numpy<1.19 scipy matplotlib pandas xarray dask pyyaml netcdf4 s3fs pytest
+  - conda create -n test --yes -c conda-forge python=$PYTHON_VERSION pip "numpy<1.19" scipy matplotlib pandas xarray dask pyyaml netcdf4 s3fs pytest
   - source activate test
   - pip install tensorflow==$TENSORFLOW_VERSION
   - pip install .
